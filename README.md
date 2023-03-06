@@ -152,9 +152,9 @@ Evaluation results that contains the following three files will be output into `
 |    ANCE   |        COTED        |   0.478   |   0.342   |
 |    ANCE   |         CRDR        |   0.472   |   0.350   |
 |    ANCE   | **LLMCS  (RAR + Mean)** | **0.506** | **0.465** |
-|           | RI to Manual        | 9.8\%     | 10.2\%    |
-|           | RI to 2nd-Best      | 5.9\%     | 32.9\%    |
-
+|           | RI over Manual        | 9.8\%     | 10.2\%    |
+|           | RI over 2nd-Best      | 5.9\%     | 32.9\%    |
+Table 1: "RI over Manual or 2nd-Best" means "relative improvements over Manual or the second-best method except for Manual".
 
 ## ✍️ Reference
 If you use LLMCS in a research paper, please cite our work as follows:
