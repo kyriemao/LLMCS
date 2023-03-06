@@ -85,8 +85,8 @@ A `rewrites.jsonl` file, which contains the rewrites or/and hypothetical respons
 We have provided our generated `rewrites.jsonl` files in the `results` folder.
 
 The Keys of `rewrites.jsonl`:
-- predicted_rewrite: rewrite (list)
-- preidcted_response: hypothetical response (list)
+- `predicted_rewrite`: rewrite (list)
+- `preidcted_response`: hypothetical response (list)
 - other auxiliary information
 
 
@@ -133,11 +133,11 @@ python eval_dense_retrieval.py \
 ```
 
 Evaluation results that contains the following three files will be output into `retrieval_output_path` that you set.
-- metrics.res: all evaluation metrics.
-- parameters.txt: parameters record of the evaluation.
-- res.trec: detailed TREC-style search results. 
+- `metrics.res`: all evaluation metrics.
+- `parameters.txt`: parameters record of the evaluation.
+- `res.trec`: detailed TREC-style search results. 
 
-# ✍️ Reference
+## ✍️ Reference
 If you use LLMCS in a research paper, please cite our work as follows:
 
 <!-- @article{khattab2022demonstrate,
