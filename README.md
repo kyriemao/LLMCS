@@ -35,9 +35,9 @@ pip install -r requirements.txt
 
 
 ## 🏃 Running
-LLMCS contains three prompting methods, including *Rewriting Prompt (REW)*, *Rewriting-Then-Response Prompt (RTR)*, and *Rewriting-And-Response Prompt (RAR)*. We also design chain-of-thought tailored to conversational searhc intent understanding that can be incorporated into these prompting methods.
+LLMCS contains three prompting methods, including *Rewriting Prompt (REW)*, *Rewriting-Then-Response Prompt (RTR)*, and *Rewriting-And-Response Prompt (RAR)*. We also design chain-of-thought tailored to conversational search intent understanding that can be incorporated into these prompting methods.
 
-First, you should set your OpenAI API key in `generator.py`
+To get started, first, you should set your OpenAI API key in `generator.py`
 ```python
 # TODO: Write your OpenAI API here.
 OPENAI_KEYS = [
@@ -60,14 +60,15 @@ Similarly, to perform RTR prompting, run:
 ```shell
 bash scripts/run_prompt_rewrite_then_response.sh
 ```
-Note that you need to provide a pre-generated rewrite file (i.e., `rewrite_file_path`) for running `prompt_rewrite_then_response.py`. To enable CoT for RAR, you can set `rewrite_file_path` to the rewrite file generated using CoT.
+Note that you need to provide a pre-generated rewrite file into the field of `rewrite_file_path` for running `prompt_rewrite_then_response.py`. To enable CoT for RAR, you can set `rewrite_file_path` to the rewrite file generated using CoT.
 ```sh
 --rewrite_file_path="./results/cast20/REW/rewrites.jsonl" \
 # --rewrite_file_path="./results/cast20/COT-REW/rewrites.jsonl" \ +COT
 ```
 
 
-### RAR Prompting 
+### RAR Prompting
+Similarly, to perform RAR prompting, run: 
 ```shell
 bash scripts/run_prompt_rewrite_and_response.sh
 ```
@@ -78,7 +79,7 @@ bash scripts/run_prompt_cot_rewrite_and_response.sh
 
 
 ## 🥚 Results
-A `rewrites.jsonl` file, which contains the rewrites and hypothetical responses,  will be generated into the `work_dir` that you set in the running script.
+A `rewrites.jsonl` file, which contains the rewrites or/and hypothetical responses,  will be generated into the `work_dir` that you set in the running script.
 
 
 We have provided our generated `rewrites.jsonl` files in the `results` folder.
@@ -94,7 +95,7 @@ The Keys of `rewrites.jsonl`:
 We design three aggregation methods, including *MaxProb*, *Mean*, and *SC*, to get the final search intent vector. Then we perform dense retrieval with [ANCE (click to download)](https://webdatamltrainingdiag842.blob.core.windows.net/semistructstore/OpenSource/Passage_ANCE_FirstP_Checkpoint.zip) for evaluation.
 
 
-**To perform evaluation, you should first build the dense index that contains all candidate passage embeddings.** There have been many good repositories that instruct how to build this index, such as [AutoRewriter](https://github.com/thunlp/ConversationQueryRewriter), [ConvDR](https://github.com/thunlp/ConvDR), [ConvTrans](https://github.com/thunlp/ConvDR). One can refer them to build the index. All passage embeddings generated from ANCE are around 103GB. 
+**To perform evaluation, you should first build the dense index that contains all candidate passage embeddings.** There have been many good public repositories that instruct how to build this index, such as [AutoRewriter](https://github.com/thunlp/ConversationQueryRewriter), [ConvDR](https://github.com/thunlp/ConvDR), [ConvTrans](https://github.com/thunlp/ConvDR). One can refer them to build the index. All passage embeddings generated from ANCE are around 103GB. 
 
 
 Then, run the following script for evaluation:
@@ -129,9 +130,12 @@ python eval_dense_retrieval.py \
 --include_query \
 --include_response \ # enable `include_response` if you test RTR or RAR prompting.
 --aggregation_method="sc" \ # you can set [`maxprob, mean, sc`]
-
 ```
 
+Evaluation results that contains the following three files will be output into `retrieval_output_path` that you set.
+- metrics.res: all evaluation metrics.
+- parameters.txt: parameters record of the evaluation.
+- res.trec: detailed TREC-style search results. 
 
 # ✍️ Reference
 If you use LLMCS in a research paper, please cite our work as follows:
