@@ -137,6 +137,24 @@ Evaluation results that contains the following three files will be output into `
 - `parameters.txt`: parameters record of the evaluation.
 - `res.trec`: detailed TREC-style search results. 
 
+
+| Retriever |        System       |  CAsT-19  |  CAsT-20  |
+|:---------:|:-------------------:|:---------:|:---------:|
+|           |                     |   NDCG@3  |   NDCG@3  |
+|    BM25   |       QuReTeC       |   0.338   |   0.171   |
+|    BM25   |         T5QR        |   0.258   |   0.141   |
+|    BM25   |        Manual       |   0.309   |   0.241   |
+|    ANCE   |       QuReTeC       |   0.443   |   0.287   |
+|    ANCE   |         T5QR        |   0.417   |   0.299   |
+|    ANCE   |        Manual       |   0.461   |   0.422   |
+|    ANCE   |        ConvDR       |   0.463   |   0.340   |
+|    ANCE   |        COTED        |   0.478   |   0.342   |
+|    ANCE   |         CRDR        |   0.472   |   0.350   |
+|    ANCE   | LLMCS  (RAR + Mean) | **0.506** | **0.465** |
+|           | RI to Manual        | 9.8\%     | 10.2\%    |
+|           | RI to 2nd-Best      | 5.9\%     | 32.9\%    |
+
+
 ## ✍️ Reference
 If you use LLMCS in a research paper, please cite our work as follows:
 
