@@ -2,13 +2,9 @@ import time
 import openai
 from IPython import embed
 
+# TODO: Write your OpenAI API here.
 OPENAI_KEYS = [
-    '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',
-    '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',
-    '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',
-    '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',
-    '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',
-    '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'
+    'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
 ]
 
 
@@ -44,8 +40,6 @@ class OpenAIGenerator(Generator):
     def generate(self, prompt, parse_fn):
         get_results = False
         while not get_results:
-            embed()
-            input()
             try:
                 result = openai.Completion.create(
                     engine=self.model_name,
