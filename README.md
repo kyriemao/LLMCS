@@ -31,6 +31,8 @@ pip install -r requirements.txt
 
 We provide the preprocessed cast19 and cast20 datasets in the `datasets` folder.
 
+`demonstrations.json` contains four exemplars randomly sampled from the CAsT-22 datasets. We manually write CoT for all of its turns.
+
 
 ## Running
 LLMCS contains three prompting methods, including *Rewriting Prompt (REW)*, *Rewriting-Then-Response Prompt (RTR)*, and *Rewriting-And-Response Prompt (RAR)*. We also design chain-of-thought tailored to conversational searhc intent understanding that can be incorporated into these prompting methods.
