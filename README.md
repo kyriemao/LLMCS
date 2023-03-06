@@ -138,6 +138,7 @@ Evaluation results that contains the following three files will be output into `
 - `res.trec`: detailed TREC-style search results. 
 
 
+### Main Results:
 | Retriever |        System       |  CAsT-19  |  CAsT-20  |
 |:---------:|:-------------------:|:---------:|:---------:|
 |           |                     |   NDCG@3  |   NDCG@3  |
