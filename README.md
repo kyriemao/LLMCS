@@ -95,7 +95,7 @@ The Keys of `rewrites.jsonl`:
 We design three aggregation methods, including *MaxProb*, *Mean*, and *SC*, to get the final search intent vector. Then we perform dense retrieval with [ANCE (click to download)](https://webdatamltrainingdiag842.blob.core.windows.net/semistructstore/OpenSource/Passage_ANCE_FirstP_Checkpoint.zip) for evaluation.
 
 
-**To perform evaluation, you should first build the dense index that contains all candidate passage embeddings.** There have been many good public repositories that instruct how to build this index, such as [AutoRewriter](https://github.com/thunlp/ConversationQueryRewriter), [ConvDR](https://github.com/thunlp/ConvDR), [ConvTrans](https://github.com/thunlp/ConvDR). One can refer them to build the index. All passage embeddings generated from ANCE are around 103GB. 
+**To perform evaluation, you should first build the dense index that contains all candidate passage embeddings.** There have been many good public repositories that instruct how to build this index, such as [AutoRewriter](https://github.com/thunlp/ConversationQueryRewriter), [ConvDR](https://github.com/thunlp/ConvDR), [ConvTrans](https://github.com/kyriemao/ConvTrans). One can refer them to build the index. All passage embeddings generated from ANCE are around 103GB. 
 
 
 Then, run the following script for evaluation:
