@@ -161,9 +161,10 @@ Table 1: "RI over Manual or 2nd-Best" means "relative improvements over Manual o
 ## ✍️ Reference
 If you use LLMCS in a research paper, please cite our work as follows:
 
-<!-- @article{khattab2022demonstrate,
-  title={Demonstrate-Search-Predict: Composing Retrieval and Language Models for Knowledge-Intensive {NLP}},
-  author={Khattab, Omar and Santhanam, Keshav and Li, Xiang Lisa and Hall, David and Liang, Percy and Potts, Christopher and Zaharia, Matei},
-  journal={arXiv preprint arXiv:2212.14024},
-  year={2022}
-} -->
+@article{khattab2022demonstrate,
+  title={Large Language Models Know Your Contextual Search Intent: A Prompting Framework for Conversational Search},
+  author={Mao, Kelong and Dou, Zhicheng and Chen, Haonan and Mo, Fengran and Qian, Hongjin},
+  journal={arXiv preprint arXiv:2303.06573},
+  year={2023}
+}
+
