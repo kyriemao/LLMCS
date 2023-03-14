@@ -161,10 +161,11 @@ Table 1: "RI over Manual or 2nd-Best" means "relative improvements over Manual o
 ## ✍️ Reference
 If you use LLMCS in a research paper, please cite our work as follows:
 
+```
 @article{mao2023llmcs,
   title={Large Language Models Know Your Contextual Search Intent: A Prompting Framework for Conversational Search},
   author={Mao, Kelong and Dou, Zhicheng and Chen, Haonan and Mo, Fengran and Qian, Hongjin},
   journal={arXiv preprint arXiv:2303.06573},
   year={2023}
 }
-
+```
