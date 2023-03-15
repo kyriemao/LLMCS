@@ -1,4 +1,4 @@
-# 🎓 Large Language Models Know Your Contextual Search Intent: A Prompting Framework for Conversational Search
+# 🎓 Large Language Models Know Your Contextual Search Intent: A Prompting Framework for Conversational Search [Work in Progress]
 
 We present a prompting framework called **LLMCS** that leverages large language models to perform few-shot conversational query rewriting for conversational search. 
 
